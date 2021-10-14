@@ -16,5 +16,5 @@ jobs:
             java-version: 11
             
         - name: Format java code    
-          run: ./demo/gradlew -p ./ spotlessApply
+          run: ./test/gradlew -p ./test spotlessApply
     
