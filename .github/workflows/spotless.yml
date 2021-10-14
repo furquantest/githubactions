@@ -1,22 +1,7 @@
 name: Spotless formatting test
 on:    
-  push:    
-    branches: [ master ]    
-    paths:    
-      - 'java/**'    
-   pull_request:    
-     branches: [ master ]    
-     types:    
-       - opened    
-       - reopened    
-       - synchronize    
-     paths:    
-       - 'java/**'    
-   # starring the repo will trigger workflow runs    
-   # gives us a way to manually trigger and test the runs    
-   watch:    
-     types: [ started ]
-  jobs:    
+ push    
+jobs:    
     spotless_test:    
       runs-on: ubuntu-latest    
       timeout-minutes: 10
