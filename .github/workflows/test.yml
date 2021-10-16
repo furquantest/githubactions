@@ -20,9 +20,7 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-    paths:
-      - 'test/**'
-      types:
+    types:
       - reopened
       - synchronize
 jobs:
