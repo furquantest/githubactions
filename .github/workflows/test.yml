@@ -20,6 +20,11 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+    paths:
+      - 'test/**'
+    types:
+      - reopened
+      - synchronize
 jobs:
   gradle-build-test:
     runs-on: ubuntu-latest
