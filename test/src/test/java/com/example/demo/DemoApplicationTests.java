@@ -19,7 +19,8 @@ class DemoApplicationTests {
 	@Test
 	public void testAdd1Plus1()
 	{
-		int x  = 1 ; int y = 2;
+		int x  = 1 ; int y = 5;
+
 		assertEquals(2, ForTest.add(x,y));
 	}
 
