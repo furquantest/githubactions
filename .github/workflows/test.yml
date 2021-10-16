@@ -18,11 +18,15 @@
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'test/**'
   pull_request:
     branches: [ main ]
     paths:
       - 'test/**'
+      - 'new-module/**'
     types:
+      - opened
       - reopened
       - synchronize
 jobs:
