@@ -20,6 +20,8 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+    types:
+         - opened
 jobs:
   gradle-build-test:
     runs-on: ubuntu-latest
