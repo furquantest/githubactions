@@ -47,4 +47,4 @@ jobs:
       if: failure()
       with:
         name: Test Report
-        path: ./build/reports
+        path: ./test/build/reports
