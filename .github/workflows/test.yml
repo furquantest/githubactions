@@ -16,10 +16,6 @@
 #     - name: Build with Gradle
 #       run: ./test/gradlew -p ./test test
 on:
-  push:
-    branches: [ main ]
-    paths:
-      - 'test/**'
   pull_request:
     branches: [ main ]
     paths:
