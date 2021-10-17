@@ -1,0 +1,9 @@
+fail_fast: true
+repos:
+  -   repo: local
+      hooks:
+        -   id: pre-commit
+            name: pre-commit
+            language: script
+            verbose: true
+            entry: ./pre-commit
