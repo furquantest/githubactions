@@ -19,7 +19,7 @@ on:
   pull_request:
     branches: [ main ]
     paths:
-      - 'test/**'
+      - './**'
     types:
       - opened
       - reopened
