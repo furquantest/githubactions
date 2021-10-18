@@ -16,17 +16,19 @@
 #     - name: Build with Gradle
 #       run: ./test/gradlew -p ./test test
 on:
-  push:
-    branches: [ main ]
   pull_request:
     branches: [ main ]
+    paths:
+      - 'test/**'
+      - 'new-module/**'
     types:
-         - opened
-         - reopened
-         - synchronize
+      - opened
+      - reopened
+      - synchronize
 jobs:
   gradle-build-test:
     runs-on: ubuntu-latest
+    timeout-minutes: 1
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 11
@@ -36,4 +38,10 @@ jobs:
         distribution: 'adopt'
         cache: gradle
     - name: Build with Gradle
-      run: ./test/gradlew -p ./test test
+      run: ./test/gradlew -p ./test build
+    - name: Upload test report artifacts
+      uses: actions/upload-artifact@v1
+      if: failure()
+      with:
+        name: Test Report
+        path: ./test/build/reports
