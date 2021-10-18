@@ -18,9 +18,6 @@
 on:
   pull_request:
     branches: [ main ]
-    paths:
-      - 'test/**'
-      - 'new-module/**'
     types:
       - opened
       - reopened
@@ -28,6 +25,8 @@ on:
 
 jobs:
   gradle-build-test:
+    env:
+      working-directory: ./test
     runs-on: ubuntu-latest
     timeout-minutes: 1
     steps:
