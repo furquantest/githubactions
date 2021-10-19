@@ -22,7 +22,6 @@ on:
       - opened
       - reopened
       - synchronize
-
 jobs:
   gradle-build-test:
     env:
