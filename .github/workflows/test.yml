@@ -25,8 +25,6 @@ on:
 
 jobs:
   gradle-build-test:
-    env:
-      working-directory: ./test
     runs-on: ubuntu-latest
     timeout-minutes: 1
     steps:
