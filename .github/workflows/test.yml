@@ -41,4 +41,6 @@ jobs:
       if: failure()
       with:
         name: Test Report
-        path: './test | ./'
+        path: |
+          ./test
+          ./new-module
