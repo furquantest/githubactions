@@ -37,8 +37,7 @@ jobs:
     - name: Build with Gradle
       run: ./test/gradlew -p ./test build
     - name: Upload test report artifacts
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v2
       if: failure()
       with:
         name: Test Report
-        path: ./test/build
