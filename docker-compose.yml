@@ -3,3 +3,8 @@ services:
   redis:
     container_name: redis-backend
     image: "openjdk:11"
+  github:
+    restart: on-failure:10
+    build:
+    context: ./
+    dockerfile: ./Dockerfile
