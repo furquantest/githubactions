@@ -6,7 +6,7 @@ on:
       - reopened
       - synchronize
 jobs:
-  gradle-build-test:
+  docker-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
