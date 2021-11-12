@@ -1,0 +1,13 @@
+on:
+  pull_request:
+    branches: [ main ]
+    types:
+      - opened
+      - reopened
+      - synchronize
+jobs:
+  gradle-build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build with docker
+        run: docker build . -t name

@@ -44,9 +44,5 @@ jobs:
         path: |
           ./test
           ./new-module
-  new-job:
-    uses: brpaz/structure-tests-action@v1
-    with:
-      image: myimage:latest
-      configFile: structure-tests.yaml
+
 
