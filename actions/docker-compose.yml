@@ -3,5 +3,5 @@ services:
   github:
     restart: on-failure:10
     build:
-      context: ./
+      context: ../
       dockerfile: ./Dockerfile
