@@ -1,0 +1,8 @@
+version: '3'
+services:
+  github:
+    restart: on-failure:10
+    build:
+      context: ../
+      dockerfile: ./Dockerfile
+

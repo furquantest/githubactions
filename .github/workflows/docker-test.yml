@@ -1,0 +1,9 @@
+name: Docker Compose Actions Workflow
+on: push
+jobs:
+  gradle-build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Docker up
+        run: docker-compose -f ./actions/docker-compose.yml up -d
