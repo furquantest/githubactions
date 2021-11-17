@@ -23,7 +23,7 @@ on:
       - reopened
       - synchronize
 jobs:
-  gradle-build-test:
+  gradle-build-test1:
     runs-on: ubuntu-latest
     timeout-minutes: 1
     steps:
