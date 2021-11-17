@@ -35,7 +35,7 @@ jobs:
         distribution: 'adopt'
         cache: gradle
     - name: Build with Gradle
-      run: ./test/gradlew -p ./test build
+      run: ./test/gradlew -p ./test builds
     - name: Upload test report artifacts
       uses: actions/upload-artifact@v1
       if: failure()
